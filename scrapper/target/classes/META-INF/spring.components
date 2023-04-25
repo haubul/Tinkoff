@@ -1,2 +1,0 @@
-configuration.ApplicationConfig=org.springframework.boot.context.properties.ConfigurationProperties
-scrpack.ScrapperApplication=org.springframework.stereotype.Component,org.springframework.boot.SpringBootConfiguration
