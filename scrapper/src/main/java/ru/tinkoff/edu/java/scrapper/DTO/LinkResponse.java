@@ -1,3 +1,10 @@
-package ru.tinkoff.edu.java.scrapper.DTO;
+package ru.tinkoff.edu.java.scrapper.dto;
 
-public record LinkResponse(long id, String url) {}
+import java.net.URI;
+import java.util.UUID;
+
+public record LinkResponse(
+        UUID id,
+        URI url
+) {
+}
