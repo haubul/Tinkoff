@@ -1,2 +1,11 @@
-# swagger-ui custom path
-springdoc.swagger-ui.path=/swagger-ui.html
+app:
+  test: "Something in the way..."
+  scheduler:
+    interval: 10000
+
+server:
+  port: 8081
+
+springdoc:
+  swagger-ui:
+    path: "/swagger-ui"

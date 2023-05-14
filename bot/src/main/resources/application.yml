@@ -1,2 +1,13 @@
-# swagger-ui custom path
-springdoc.swagger-ui.path=/swagger-ui.html
+app:
+  test: "Something in the way..."
+
+bot:
+  token:
+
+scrapper:
+  baseUrl: "http://localhost:8081"  # базовый URL для scrapper client
+
+springdoc:
+  swagger-ui:
+    path: "/swagger-ui"
+
