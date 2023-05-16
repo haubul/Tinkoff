@@ -1,3 +1,10 @@
-package ru.tinkoff.edu.java.scrapper.DTO;
+package ru.tinkoff.edu.java.scrapper.dto;
 
-public record RemoveLinkRequest(String link) {}
+import jakarta.validation.constraints.NotNull;
+import org.springframework.validation.annotation.Validated;
+
+import java.net.URI;
+
+@Validated
+public record RemoveLinkRequest(@NotNull URI link) {
+}

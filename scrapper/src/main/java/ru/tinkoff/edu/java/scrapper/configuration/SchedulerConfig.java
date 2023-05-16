@@ -1,12 +1,18 @@
 package ru.tinkoff.edu.java.scrapper.configuration;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
-@Configuration
-public class SchedulerConfig {
-    @Bean
-    public long schedulerTimer(ApplicationConfig config) {
-        return config.scheduler().interval().toMillis();
+import java.time.Duration;
+
+@Component
+public final class SchedulerConfig {
+    private final Duration interval;
+
+    public SchedulerConfig(ApplicationConfig applicationConfig) {
+        this.interval = applicationConfig.scheduler().interval().getDuration();
+    }
+
+    public Duration getInterval() {
+        return interval;
     }
 }
